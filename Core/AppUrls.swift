@@ -29,22 +29,22 @@ public struct AppUrls {
         
         static let base = ProcessInfo.processInfo.environment["BASE_URL", default: "https://onbibi.com/search"]
         static let externalContentBase = "https://external-content.duckduckgo.com"
-        static let staticBase = "https://api.onbibi.com"
+        static let staticBase = "https://staticcdn.duckduckgo.com"
         
         static let autocomplete = "https://duckduckgo.com/ac/"
         
-        static let surrogates = "\(staticBase)/contentblocking.js?l=surrogates"
-        static let temporaryUnprotectedSites = "\(staticBase)/contentblocking/trackers-whitelist-temporary.txt"
+        static let surrogates = "https://duckduckgo.com/contentblocking.js?l=surrogates"
+        static let temporaryUnprotectedSites = "https://duckduckgo.com/contentblocking/trackers-whitelist-temporary.txt"
         static let trackerDataSet = "\(staticBase)/trackerblocking/v2.1/tds.json"
 
-        static let atb = "\(staticBase)/atb.js\(devMode)"
-        static let exti = "\(staticBase)/exti/\(devMode)"
-        static let feedback = "\staticBase)/feedback.js?type=app-feedback"
+        static let atb = "https://duckduckgo.com/atb.js\(devMode)"
+        static let exti = "https://duckduckgo.com/exti/\(devMode)"
+        static let feedback = "https://duckduckgo.com/feedback.js?type=app-feedback"
  
         static let httpsBloomFilter = "\(staticBase)/https/https-mobile-bloom.bin?cache-version=1"
         static let httpsBloomFilterSpec = "\(staticBase)/https/https-mobile-bloom-spec.json?cache-version=1"
         static let httpsExcludedDomains = "\(staticBase)/https/https-mobile-whitelist.json?cache-version=1"
-        static let httpsLookupService = "\(staticBase)/smarter_encryption.js"
+        static let httpsLookupService = "https://duckduckgo.com/smarter_encryption.js"
 
         static let pixelBase = ProcessInfo.processInfo.environment["PIXEL_BASE_URL", default: "https://improving.duckduckgo.com"]
         static let pixel = "\(pixelBase)/t/%@_ios_%@"
