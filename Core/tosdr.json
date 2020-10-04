@@ -1,4 +1,20 @@
 {
+    "onbibi.com": {
+        "score": -100,
+        "all": {
+            "bad": [],
+            "good": [
+                "no tracking, family-friendly, privacy"
+            ]
+        },
+        "match": {
+            "bad": [],
+            "good": [
+                "no tracking, family-friendly, privacy"
+            ]
+        },
+        "class": "A+"
+    },
     "zoosk.com": {
         "score": 0,
         "all": {
