@@ -26,8 +26,6 @@ class SettingsViewController: UITableViewController {
     @IBOutlet var margins: [NSLayoutConstraint]!
     @IBOutlet weak var defaultBrowserCell: UITableViewCell!
     @IBOutlet weak var themeAccessoryText: UILabel!
-    @IBOutlet weak var appIconCell: UITableViewCell!
-    @IBOutlet weak var appIconImageView: UIImageView!
     @IBOutlet weak var autocompleteToggle: UISwitch!
     @IBOutlet weak var authenticationToggle: UISwitch!
     @IBOutlet weak var homePageAccessoryText: UILabel!
@@ -96,11 +94,6 @@ class SettingsViewController: UITableViewController {
             return
         }
 
-        if segue.destination is AppIconSettingsViewController {
-            Pixel.fire(pixel: .settingsAppIconShown)
-            return
-        }
- 
         if segue.destination is KeyboardSettingsViewController {
             Pixel.fire(pixel: .settingsKeyboardShown)
             return
@@ -142,14 +135,6 @@ class SettingsViewController: UITableViewController {
             themeAccessoryText.text = UserText.themeAccessoryLight
         case .dark:
             themeAccessoryText.text = UserText.themeAccessoryDark
-        }
-    }
-
-    private func configureIconViews() {
-        if AppIconManager.shared.isAppIconChangeSupported {
-            appIconImageView.image = AppIconManager.shared.appIcon.smallImage
-        } else {
-            appIconCell.isHidden = true
         }
     }
 
